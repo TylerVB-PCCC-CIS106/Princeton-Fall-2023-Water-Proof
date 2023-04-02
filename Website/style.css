@@ -1,0 +1,152 @@
+main{
+    min-height: 100vh;
+    background: linear-gradient(to left bottom,#659adf,#6cebd4);
+    display: flex;  /* need to use flex to access align nd justify content */
+    align-items: center; /* aligns items vrtically */
+    justify-content: center; /* aligns items horizontally */
+}
+nav ul
+{
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 10%;
+	margin-right: 10%;
+}
+nav ul li{
+	background-color: navy;
+	text-align: center;
+	border-radius: 20px;
+	
+}
+
+nav ul li a
+{
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+
+nav ul li a:hover
+{
+	
+	color: pink;
+}
+.glass{
+    background-color: white;
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(to right top,
+     rgba(255, 255, 255, 0.6)   /* top opacity foir white */
+    ,rgba(255, 255, 255, 0.3)); /* bottom opacity foir white */
+    border-radius: 20px; /* rounding up the edges */
+    z-index: 2; /* needed to bring the main panel forward */
+    backdrop-filter: blur(0.4rem);
+    border-right: solid rgb(255, 255, 255);
+    border-left: solid rgb(237, 182, 255);
+    
+}
+
+/* the squares are gonna basically inherit the properties
+of the main display area, but will be pushed back for a glass effect */
+.square1, .square2{
+    background-color: white;
+   border-radius: 300px;
+   height: 300px;
+   width: 300px;
+   position: absolute;  /* having absolute position will enble us to move around the squares */
+
+}
+
+/* decided to make the squares as circles */
+
+.square1{
+    top: 5%;
+    left: 10%;
+    background: linear-gradient(to right top,
+    rgba(255, 0, 170, 0.8)   /* top opacity foir white */
+   ,rgb(255, 214, 241)); /* bottom opacity foir white */
+   
+}
+                    /* need to set the position seperately */
+.square2{
+    top: 60%;
+    right: 10%;
+    background: linear-gradient(to right top,
+    rgba(128, 0, 255, 0.8)   /* top opacity foir white */
+   ,rgb(244, 202, 255)); /* bottom opacity foir white */
+   
+}
+
+.search 
+{
+    display: flex;
+    justify-content: center;
+}
+.searchBar, .phoneNum{
+    
+    border-radius: 20px;
+    
+
+    background-color: transparent rgba(255, 255, 255, 0.04);
+    width: 50%;
+    height: 30px;
+    border: solid;
+    box-shadow: #6cebd4;        /* applying a drop shadow to make it pop */
+    border-color: rgba(219, 158, 224, 0.341);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+/* these next two styling is done to have a hover and click effect */
+.h2title
+{
+    margin-top: 200px;
+}
+.searchBar:hover{
+    border: solid #6cebd4;
+}
+.searchBar:focus{
+    outline: none;
+}
+
+.cbut{
+    background: white;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin-left: 5%;
+    z-index: 2;
+    border: solid;
+    box-shadow: #6cebd4;        /* applying a drop shadow to make it pop */
+    border-color: rgba(219, 158, 224, 0.341);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cbut:hover{
+    border: solid #6cebd4;
+}
+.cbut:focus{
+    outline: none;
+}
+  
+h2{
+    display: flex;  /* need to use flex to access align nd justify content */
+    align-items: center; /* aligns items vrtically */
+    justify-content: center; /* aligns items horizontally */
+    color: white;
+    font-family: roboto;
+    font-weight: lighter;
+    font-style:initial;  
+}
+
+.Water{
+    
+   margin-top: 100px;
+   margin: auto;
+   width: 80%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+
+
+}
